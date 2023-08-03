@@ -55,6 +55,77 @@ users = ["ahmad", "mammad", "kobra", "kamran", "juan", "jina"]
 #     "password": ["1234", "fdase"]
 # }
 
+amir = "Amir"
+
+sample_dict = {
+    2: "A",
+    2.3: "Gholam",
+    "name": "Ali",
+    True: "B",
+    # [2, 3]: "c",  # ERROR
+    "name": "Reza",
+    # {2, 3}: "H",  # ERROR
+    # {"name": "n"}: "C" # ERROR
+    (3, 2): "HARCHI",
+
+}
+
+print(sample_dict.get("nadare", "Default"))
+
+for key, val in sample_dict.items():
+    print("key ", key)
+    print("val ", val)
+
+# Sama Question: chejuri mitunim list ra sort konim?
+
+products = ["lebas", "machine", "mobile",
+            "aebgljewbtflewjhnfleflje", "lebas", "1Sama", "2Same"]
+# products.sort()
+# print(sorted(products))
+# print(products.sort())
+
+# Soal Mentor: chejuri mitunim begim be sort ke bar che asasi sort kone?
+# products.sort(reverse=True)
+
+
+def sort_by_len(input_str):
+    return len(input_str)
+
+
+# ====> anonymous function(function ye bar masraf)
+# def harchi(x, y):
+#     return "Salam " + x
+
+# print((lambda x, y: "Salam " + x + " Salam " + y)("H", "Sama"))
+
+
+# def sort_by_second_char(input_str):
+#     return input_str[1]
+
+# Alireza.S Q: chikar konim ke ghabeliat che characteri dynamic beshe? Mentor answer ==> higher order function ===> functioni ke function return kone(closure)
+
+
+def dynamic_sort_by_second_char(char_num):
+    def sort_by_second_char(input_str):
+        return input_str[char_num]
+    return sort_by_second_char
+
+
+# har eleman list ro midahad be my_fun va khorujie function ro barmigardune ke baraye moghayese elemanha az haman khoruji estefade mikoneh!
+products.sort(key=lambda x: len(x))
+print(products)
+
+
+# set
+
+# products = ["lebas", "machine", "mobile", "lebas"]
+# print(set(products))
+
+# for elm in {3, 5, 2, 5, 5, 1}:
+#     print(elm)
+
+exit(0)
+
 '''
     users ===> har element ===> (username, age, pass)
 '''

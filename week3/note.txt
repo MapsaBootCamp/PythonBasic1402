@@ -1,4 +1,2 @@
-SALAM ASHKAN
-BOOTCAMP PYTHON
-PANJSHANBEH
-CHEMIDUNAM
+1. open file with read mode needs that file to exist!   
+2. seek(offset,from=SEEK_SET)  ====> from (start, current, end) ===> 0:start, 1:current, 2:end ===> good for binary
